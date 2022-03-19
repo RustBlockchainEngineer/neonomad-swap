@@ -36,7 +36,7 @@ use solana_program::{
 use std::convert::TryInto;
 
 /// address to change the program state at first
-pub const INITIAL_STATE_OWNER: &str = "2Pv5mjmKYAtXNpr3mcsXf7HjtS3fieJeFoWPATVT5rWa";
+pub const INITIAL_STATE_OWNER: &str = "3rmPWdtGN41J49aZhkdwhpzExpNVYP812jNJXoNqA2Yo";
 
 /// Seed for prgoram state
 pub const AMM_STATE_SEED:&str = "AmmState";
