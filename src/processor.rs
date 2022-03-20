@@ -414,6 +414,9 @@ impl Processor {
         {
             return Err(AmmError::NotInitializedState.into());
         }
+        if *authority_info.key != state.state_owner {
+            return Err(AmmError::InvalidOwner.into());
+        }
 
         let token_a = Self::unpack_token_account(token_a_info, &token_program_id)?;
         let token_b = Self::unpack_token_account(token_b_info, &token_program_id)?;
