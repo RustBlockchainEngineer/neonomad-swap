@@ -52,7 +52,7 @@ impl<'a> SwapConstraints<'a> {
 
 // const OWNER_KEY: &str = env!("SWAP_PROGRAM_OWNER_FEE_ADDRESS");
 // const OWNER_KEY: &str = "AMMAE3eViwHuH25gWHfLpsVqtwmBSksGohE53oEmYrG2";
-const OWNER_KEY: &str = "3rmPWdtGN41J49aZhkdwhpzExpNVYP812jNJXoNqA2Yo";
+const OWNER_KEY: &str = "DjXkZxNWUoGsL87rbWRFVPmoxN1FKXUWpinUyN921PwQ";
 
 const FEES: &Fees = &Fees {
     fixed_fee_numerator: 20,
