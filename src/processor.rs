@@ -396,6 +396,7 @@ impl Processor {
 
         let token_program_info = next_account_info(account_info_iter)?;
         let dex_program_info = next_account_info(account_info_iter)?;
+        let cur_state_owner_info = next_account_info(account_info_iter)?;
 
         //validate account info
         let token_program_id = *token_program_info.key;
@@ -414,7 +415,10 @@ impl Processor {
         {
             return Err(AmmError::NotInitializedState.into());
         }
-        if *authority_info.key != state.state_owner {
+        if !cur_state_owner_info.is_signer{
+            return Err(AmmError::InvalidSigner.into());
+        }
+        if *cur_state_owner_info.key != state.state_owner {
             return Err(AmmError::InvalidOwner.into());
         }
 
